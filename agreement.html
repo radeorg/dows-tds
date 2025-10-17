@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兼职技术人员项目协作协议</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa',
+                        neutral: '#f3f4f6',
+                        dark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fa fa-handshake-o text-primary text-2xl mr-3"></i>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">兼职技术人员项目协作协议</h1>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#chapter1" class="text-gray-600 hover:text-primary transition-colors">总则</a></li>
+                    <li><a href="#chapter2" class="text-gray-600 hover:text-primary transition-colors">任务流程</a></li>
+                    <li><a href="#chapter3" class="text-gray-600 hover:text-primary transition-colors">报酬结算</a></li>
+                    <li><a href="#chapter4" class="text-gray-600 hover:text-primary transition-colors">管理规范</a></li>
+                    <li><a href="#chapter5" class="text-gray-600 hover:text-primary transition-colors">激励机制</a></li>
+                    <li><a href="#chapter6" class="text-gray-600 hover:text-primary transition-colors">保密条款</a></li>
+                    <li><a href="#chapter7" class="text-gray-600 hover:text-primary transition-colors">附则</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+        <!-- 侧边栏导航 -->
+        <aside id="sidebar" class="hidden md:block md:w-1/4 lg:w-1/5 pr-6 mb-8 md:mb-0">
+            <div class="sticky top-24 bg-white rounded-lg shadow p-4">
+                <h2 class="text-lg font-semibold text-primary mb-4 pb-2 border-b border-gray-200">章节导航</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#chapter1" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-file-text-o mr-2 text-sm"></i>
+                            第一章：总则
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter2" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-tasks mr-2 text-sm"></i>
+                            第二章：任务领取与开发流程
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter3" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-money mr-2 text-sm"></i>
+                            第三章：报酬计算与支付
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter4" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-clock-o mr-2 text-sm"></i>
+                            第四章：时间、风险与质量管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter5" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-trophy mr-2 text-sm"></i>
+                            第五章：加入权益与股权激励晋升机制
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter6" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-lock mr-2 text-sm"></i>
+                            第六章：保密与知识产权条款
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter7" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-list-alt mr-2 text-sm"></i>
+                            第七章：附则
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#appendix" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-paperclip mr-2 text-sm"></i>
+                            附件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#signature" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                            <i class="fa fa-pencil mr-2 text-sm"></i>
+                            签署页
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <button id="print-btn" class="w-full flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded transition-colors">
+                        <i class="fa fa-print mr-2"></i> 打印协议
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+            <div class="bg-white h-full w-3/4 max-w-xs p-4 shadow-xl transform transition-transform">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold text-primary">章节导航</h3>
+                    <button id="close-menu" class="text-gray-500 hover:text-gray-700">
+                        <i class="fa fa-times text-xl"></i>
+                    </button>
+                </div>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#chapter1" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第一章：总则
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter2" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第二章：任务领取与开发流程
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter3" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第三章：报酬计算与支付
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter4" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第四章：时间、风险与质量管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter5" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第五章：加入权益与股权激励晋升机制
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter6" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第六章：保密与知识产权条款
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chapter7" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            第七章：附则
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#appendix" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            附件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#signature" class="block text-gray-700 hover:text-primary transition-colors py-2">
+                            签署页
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <section class="md:w-3/4 lg:w-4/5">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <!-- 封面信息 -->
+                <div class="text-center mb-12 pb-6 border-b border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">兼职技术人员项目协作协议</h1>
+                    <p class="text-gray-600">项目任务管理、报酬计算与支付规范</p>
+                </div>
+
+                <!-- 第一章：总则 -->
+                <div id="chapter1" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="1">
+                        <h2 class="text-2xl font-bold text-primary">第一章：总则</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-2">1. 目的</p>
+                            <p class="text-gray-700 pl-4">为规范兼职技术人员的项目协作、任务管理、报酬计算与支付，明确各方权利与义务，保障项目知识产权与商业秘密，特制定本协议。</p>
+                        </div>
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-2">2. 原则</p>
+                            <p class="text-gray-700 pl-4">本协议遵循“按劳分配、责任清晰、过程可控、结果导向、保密优先”的原则。</p>
+                        </div>
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-2">3. 适用范围</p>
+                            <p class="text-gray-700 pl-4">所有通过本机制加入项目并领取开发任务的兼职技术人员。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第二章：任务领取与开发流程 -->
+                <div id="chapter2" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="2">
+                        <h2 class="text-2xl font-bold text-primary">第二章：任务领取与开发流程</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第1条：需求认领与模块划分</p>
+                            <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                                <li>项目负责人将产品需求分解为独立的、可交付的功能模块。</li>
+                                <li>兼职人员在公共看板（如云效，飞书项目，GitHub Projects）上认领模块。认领即视为承诺按时、按质完成。</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第2条：设计评审</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">表结构与技术设计：</span>
+                                    认领人需在认领后【例如：2个工作日】内，提交其负责模块的数据库表结构设计文档和核心功能实现思路说明。
+                                </li>
+                                <li>
+                                    <span class="font-medium">评审会议：</span>
+                                    团队定期召开设计评审会，所有核心开发人员参与。认领人需陈述其设计，接受质询。
+                                </li>
+                                <li>
+                                    <span class="font-medium">评审结果：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>通过：进入下一阶段。</li>
+                                        <li>修改后通过：认领人需按评审意见修改，并由推荐人（见第四章）或项目负责人复核通过。</li>
+                                        <li>不通过：该模块重新释放至看板，供他人认领。原认领人本次不获得报酬。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">第3条：开发时间评估与承诺</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">自评：</span>
+                                    设计评审通过后，认领人需基于通过的设计方案，评估一个"顺利开发情况下"的工时（以"天"为单位，1天=3小时）。
+                                </li>
+                                <li>
+                                    <span class="font-medium">团队评审：</span>
+                                    团队对自评工时进行评审。评审重点在于逻辑的合理性，而非单纯压缩时间。团队成员可基于经验提出质疑，认领人需进行解释。
+                                </li>
+                                <li>
+                                    <span class="font-medium">最终确定：</span>
+                                    经团队评审通过的工时，即为该模块的"承诺工时"，并作为后续报酬计算的基准。此工时应记录在案，双方确认。
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第三章：报酬计算与支付 -->
+                <div id="chapter3" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="3">
+                        <h2 class="text-2xl font-bold text-primary">第三章：报酬计算与支付</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第4条：报酬标准</p>
+                            <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                                <li>报酬单价为：100元/天（按承诺工时计算）。</li>
+                                <li>模块总报酬 = 承诺工时（天） × 100元。</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第5条：支付条件与节点（核心）</p>
+                            <p class="text-gray-700 mb-3">为兼顾效率与质量，支付分两阶段进行：</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-4">
+                                <li>
+                                    <span class="font-medium">第一阶段：功能验收支付（50%）</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>认领人完成开发后，提测至测试环境。</li>
+                                        <li>通过测试人员的功能测试验收（即所有预定功能点实现，无阻断性Bug）。</li>
+                                        <li>验收通过后，支付该模块总报酬的50%。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-medium">第二阶段：上线稳定支付（50%）</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>该模块随版本成功上线至生产环境。</li>
+                                        <li>上线后，经过【例如：7个自然日】的观察期，若无由该模块引起的P1/P2级别重大线上事故（事故级别定义见附件），支付剩余的50%。</li>
+                                        <li>若在此期间出现问题，需认领人负责修复，修复无误后，再启动稳定期观察。若因故由他人修复，则按第6条处理。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">第6条：未完成模块的处理（退出机制）</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    若认领人因任何原因无法继续完成模块开发，需提前通知推荐人及项目负责人，并交接所有代码、文档和当前进度。
+                                </li>
+                                <li>
+                                    <span class="font-medium">报酬计算：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>已通过功能验收的部分：按第5条支付已验收部分的报酬。</li>
+                                        <li>未通过验收的部分：由项目负责人和接手人共同评估已完成部分的开发量（可按子任务完成度或代码价值评估）。原则上，已完成部分的价值不得超过剩余承诺工时对应的报酬。</li>
+                                        <li>最终支付给退出者的金额 = (已完成并经确认的价值) × 100元。此部分报酬在接手人完成整个模块并上线后一并支付。</li>
+                                        <li>接手人完成模块后，获得的报酬为：(模块总报酬 - 已支付给退出者的报酬)。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第四章：时间、风险与质量管理 -->
+                <div id="chapter4" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="4">
+                        <h2 class="text-2xl font-bold text-primary">第四章：时间、风险与质量管理</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第7条：开发时间与调试风险</p>
+                            <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">原则：</span>
+                                    开发时间评估已包含对"一般性技术难题"的预估。开发者应具备解决其承诺模块范围内常见问题的能力。
+                                </li>
+                                <li>
+                                    <span class="font-medium">例外情况：</span>
+                                    如在开发过程中遇到公认的、前所未有的技术难题或外部依赖（如第三方API变更）导致的重大阻碍，可按以下流程处理：
+                                    <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                        <li>开发者需立即向推荐人和项目负责人报告，并书面说明问题详情及已尝试的解决方案。</li>
+                                        <li>经团队评估确认，该问题确属"超纲"风险，可批准追加不超过原承诺工时50%的"风险工时"。</li>
+                                        <li>严禁开发者私自花费远超市平均解决时间（如超过1天）去调试而不沟通。此类情况不予追加工时。</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">第8条：推荐人负责制</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">谁推荐，谁负责：</span>
+                                    推荐人作为其引进人员的担保人和第一责任人。
+                                </li>
+                                <li>
+                                    <span class="font-medium">责任：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>协助新人熟悉流程、规范。</li>
+                                        <li>监督其被推荐人的开发进度，确保按时间表推进。</li>
+                                        <li>成为被推荐人的第一技术支持，协助解决技术难题。</li>
+                                        <li>如被推荐人多次无法完成任务或中途退出，将影响推荐人在团队中的信誉度。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第五章：加入权益与股权激励晋升机制 -->
+                <div id="chapter5" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="5">
+                        <h2 class="text-2xl font-bold text-primary">第五章：加入权益与股权激励晋升机制</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第9条：原则与目标</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">双轨制原则：</span>
+                                    本项目实行"即时报酬 + 长期激励"的双轨制。即时报酬按本协议第三章执行，长期激励按本章执行。
+                                </li>
+                                <li>
+                                    <span class="font-medium">目标：</span>
+                                    通过公开、公平、可量化的贡献积分体系，识别并激励对项目有长期、核心价值的成员，为其提供晋升为项目合伙人的通道。
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第10条：贡献积分体系</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">积分账户：</span>
+                                    为每一位签署本协议的兼职人员设立一个独立的"贡献积分"账户。
+                                </li>
+                                <li>
+                                    <span class="font-medium">积分来源：</span>
+                                    积分通过以下途径获得，所有积分需经项目管理委员会（由项目负责人、核心技术成员等组成）定期评审后确认入账。
+                                    
+                                    <div class="overflow-x-auto mt-4">
+                                        <table class="min-w-full bg-white border border-gray-200">
+                                            <thead>
+                                                <tr class="bg-gray-100">
+                                                    <th class="py-2 px-4 border-b text-left">积分类别</th>
+                                                    <th class="py-2 px-4 border-b text-left">积分项与标准</th>
+                                                    <th class="py-2 px-4 border-b text-left">积分值</th>
+                                                    <th class="py-2 px-4 border-b text-left">备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="py-2 px-4 border-b font-medium">基础开发积分</td>
+                                                    <td class="py-2 px-4 border-b">按时按质完成一个模块，并通过功能测试与上线稳定验收</td>
+                                                    <td class="py-2 px-4 border-b">模块承诺工时 × 1</td>
+                                                    <td class="py-2 px-4 border-b">例如：一个评估为3天的模块，完成后得3分。此为保底积分</td>
+                                                </tr>
+                                                <tr class="bg-gray-50">
+                                                    <td class="py-2 px-4 border-b font-medium">质量奖励积分</td>
+                                                    <td class="py-2 px-4 border-b">代码评审被评为"优秀"（如：结构清晰、注释完整、无低级错误）</td>
+                                                    <td class="py-2 px-4 border-b">+ (模块承诺工时 × 0.2)</td>
+                                                    <td class="py-2 px-4 border-b">由代码评审人提名，委员会确认</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-2 px-4 border-b font-medium">难度挑战积分</td>
+                                                    <td class="py-2 px-4 border-b">认领并完成被标记为【高难度】或【核心技术】的模块</td>
+                                                    <td class="py-2 px-4 border-b">+ (模块承诺工时 × 0.5)</td>
+                                                    <td class="py-2 px-4 border-b">模块在发布时即由委员会标记难度系数</td>
+                                                </tr>
+                                                <tr class="bg-gray-50">
+                                                    <td class="py-2 px-4 border-b font-medium">超额贡献积分</td>
+                                                    <td class="py-2 px-4 border-b">在承诺工期内，提前完成模块开发</td>
+                                                    <td class="py-2 px-4 border-b">+ (提前天数 × 1)</td>
+                                                    <td class="py-2 px-4 border-b">鼓励高效，但必须通过质量验收</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-2 px-4 border-b font-medium">特殊贡献积分</td>
+                                                    <td class="py-2 px-4 border-b">
+                                                        <div>技术攻坚：独立解决项目重大技术难题或线上BUG</div>
+                                                        <div>知识共享：撰写高质量技术文档、教程，或在内部进行技术分享</div>
+                                                        <div>团队协助：积极协助他人解决问题，或接手他人遗留的疑难模块</div>
+                                                    </td>
+                                                    <td class="py-2 px-4 border-b">
+                                                        <div>+ 5 到 20 分</div>
+                                                        <div>+ 2 到 5 分</div>
+                                                        <div>+ (该模块积分 × 0.3)</div>
+                                                    </td>
+                                                    <td class="py-2 px-4 border-b">
+                                                        <div>由委员会根据问题重要性评估</div>
+                                                        <div>提升团队整体能力</div>
+                                                        <div>奖励团队精神</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第11条：积分的记录与查询</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">公开透明：</span>
+                                    使用在线共享文档（如语雀、腾讯文档、Google Sheets）或项目管理工具插件，实时更新所有人的积分账户。每位成员可随时查看自己的积分明细和总排名。
+                                </li>
+                                <li>
+                                    <span class="font-medium">定期同步：</span>
+                                    每月同步一次积分总额，并进行公示（可匿名化处理），确保公平公正。
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第12条：股权的兑换与晋升机制</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">晋升门槛：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>初级合伙人：当一名成员的累计贡献积分首次达到100分时，自动获得"初级合伙人"身份，并拥有参与项目分红的资格。</li>
+                                        <li>核心合伙人：当累计贡献积分首次达到300分时，自动晋升为"核心合伙人"，获得技术入股的邀请资格。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-medium">股权兑换池：</span>
+                                    项目方将设立一个占总股本【例如：10%】的"期权池"（Option Pool），专门用于激励贡献者。
+                                </li>
+                                <li>
+                                    <span class="font-medium">兑换规则：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>兑换时机：在项目达到某个关键里程碑（如产品正式上线、获得首轮融资等）时，项目方将启动股权兑换。</li>
+                                        <li>兑换公式：具备资格的成员，其可认购的股权比例计算公式如下：<br>
+                                            个人可认购股权比例 = (个人总积分 / 所有具备资格成员的总积分之和) × 本期释放的期权池总比例
+                                        </li>
+                                        <li>示例：假设期权池为10%，A、B、C三位核心合伙人的积分分别为350, 300, 250，总和为900。则A可认购的股权比例为 (350 / 900) × 10% ≈ 3.89%。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-medium">行权与协议：</span>
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>成员获得股权认购额度后，需与项目方主体公司签署正式的《股权认购协议》（或《期权协议》）。</li>
+                                        <li>协议将明确股权的兑现计划（Vesting，通常为4年）、行权价格（如有）、退出机制等标准法律条款。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">第13条：积分的清零与保留</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-2">
+                                <li>若成员因个人原因退出项目，其积分账户将被冻结。</li>
+                                <li>若该成员在项目启动股权兑换前回归，经委员会批准，可恢复其部分或全部历史积分。</li>
+                                <li>若成员因重大过失（如泄露机密、恶意破坏代码）被清退，其所有积分清零，并永久失去激励资格。</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第六章：保密与知识产权条款 -->
+                <div id="chapter6" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="6">
+                        <h2 class="text-2xl font-bold text-primary">第六章：保密与知识产权条款</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第14条：保密义务</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    <span class="font-medium">保密内容：</span>
+                                    兼职人员在项目期间接触到的所有与项目相关的非公开信息，均视为保密信息。包括但不限于：
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>项目需求、设计文档、数据库结构、源代码、算法、技术方案、技术图纸。</li>
+                                        <li>商业计划、商业模式、客户名单、财务数据、市场策略、未发布的产品信息。</li>
+                                        <li>项目内部讨论、会议记录、决策过程以及其他一切未公开的商业和技术资料。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-medium">义务：</span>
+                                    兼职人员应对保密信息承担严格的保密义务，不得向任何第三方（包括无关的亲友、同事）泄露、披露、复制、出售或许可使用保密信息。
+                                </li>
+                                <li>
+                                    <span class="font-medium">期限：</span>
+                                    保密义务不因本协议的终止或该模块的完成而终止。在本协议有效期内及终止后【3年】内持续有效。对于核心技术秘密（如源代码、核心算法），保密义务永久有效，直至该信息进入公有领域。
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第15条：知识产权归属</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    兼职人员在履行本协议过程中，为完成开发任务所产生的一切工作成果（包括但不限于源代码、目标代码、技术文档、设计图、数据库结构、UI/UX设计、发明创造等）的知识产权及所有权，均独占性地、排他性地归属于项目方（甲方）所有。
+                                </li>
+                                <li>
+                                    兼职人员有义务协助项目方办理任何知识产权的申请、登记等手续，费用由项目方承担。
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-3">第16条：竞业限制与不招揽</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    在参与项目期间及项目结束后【例如：6个月】内，未经项目方书面同意，兼职人员不得直接或间接从事与项目方构成竞争关系的业务，或为任何竞争对手提供类似服务。
+                                </li>
+                                <li>
+                                    兼职人员不得引诱、招揽或试图招揽项目方的其他员工或合作成员离开项目。
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">第17条：违约与赔偿责任</p>
+                            <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+                                <li>
+                                    任何违反本章（第六章）保密与知识产权条款的行为，均被视为重大违约。
+                                </li>
+                                <li>
+                                    一旦发生违约，项目方有权立即终止与兼职人员的所有合作，并采取以下一项或多项措施：
+                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <li>扣除其全部未支付的报酬。</li>
+                                        <li>追回就违约模块已支付的全部报酬。</li>
+                                        <li>要求兼职人员承担由此给项目方造成的全部直接和间接经济损失，并承担相应的法律责任（包括但不限于诉讼费、律师费、调查费等）。</li>
+                                        <li>永久禁止该人员参与项目的任何后续工作。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第七章：附则 -->
+                <div id="chapter7" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="7">
+                        <h2 class="text-2xl font-bold text-primary">第七章：附则</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <ul class="list-disc pl-8 text-gray-700 space-y-4">
+                            <li>
+                                <span class="font-medium">争议解决：</span>
+                                本协议执行过程中如发生争议，应由团队核心成员协商解决。协商不成的，可提交至【指定地点】仲裁委员会仲裁。
+                            </li>
+                            <li>
+                                <span class="font-medium">协议生效与修改：</span>
+                                本协议自首批成员签署之日起生效。协议的修改需经核心团队成员【例如：2/3以上】同意。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 附件 -->
+                <div id="appendix" class="mb-10 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="8">
+                        <h2 class="text-2xl font-bold text-primary">附件</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="mb-6">
+                            <p class="font-semibold text-lg mb-3">附件一：线上事故级别定义</p>
+                            <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                                <li>
+                                    <span class="font-medium">P1级别：</span>
+                                    导致系统完全不可用、核心功能无法使用、数据丢失或错误等严重影响线上业务的事故。
+                                </li>
+                                <li>
+                                    <span class="font-medium">P2级别：</span>
+                                    影响部分用户使用、非核心功能异常、但可通过临时方案规避的问题。
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 签署页 -->
+                <div id="signature" class="mb-6 scroll-mt-24">
+                    <div class="chapter-header cursor-pointer flex items-center justify-between bg-primary/10 p-4 rounded-lg mb-4" data-chapter="9">
+                        <h2 class="text-2xl font-bold text-primary">签署页</h2>
+                        <i class="fa fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div class="chapter-content pl-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <p class="font-semibold text-lg mb-4">项目方（甲方）：</p>
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="text-gray-600 mb-1">公司/团队名称：_________________________</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600 mb-1">授权代表：_________________________</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600 mb-1">日期：_________________________</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg mb-4">兼职人员（乙方）：</p>
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="text-gray-600 mb-1">姓名：_________________________</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600 mb-1">身份证号：_________________________</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600 mb-1">联系方式：_________________________</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600 mb-1">日期：_________________________</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="font-semibold text-lg mb-4">推荐人（丙方，如有）：</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-gray-600 mb-1">姓名：_________________________</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 mb-1">身份证号：_________________________</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 mb-1">联系方式：_________________________</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 mb-1">日期：_________________________</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="text-center mb-4"><span class="font-medium">(以下为签署确认栏)</span></p>
+                            <p class="text-gray-700 mb-4">本人已仔细阅读并完全理解本协议的全部内容，包括其中的保密与知识产权条款，并自愿签署本协议。</p>
+                            <div>
+                                <p class="text-gray-600 mb-1">兼职人员（乙方）签字：_________________________</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-lg font-semibold">兼职技术人员项目协作协议</p>
+                    <p class="text-gray-400 mt-2">© 2023 项目管理团队 版权所有</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-question-circle text-xl"></i>
+                        <span class="ml-1">帮助中心</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-envelope text-xl"></i>
+                        <span class="ml-1">联系我们</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 章节折叠/展开功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 章节折叠/展开
+            const chapterHeaders = document.querySelectorAll('.chapter-header');
+            chapterHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // 切换内容显示状态
+                    if (content.style.display === 'none' || !content.style.display) {
+                        content.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.style.display = 'none';
+                        icon.style.transform = 'rotate(0)';
+                    }
+                });
+            });
+
+            // 默认展开第一章，其他章节折叠
+            const chapters = document.querySelectorAll('.chapter-content');
+            for (let i = 1; i < chapters.length; i++) {
+                chapters[i].style.display = 'none';
+            }
+            if (chapters.length > 0) {
+                chapterHeaders[0].querySelector('i').style.transform = 'rotate(180deg)';
+            }
+
+            // 移动端菜单
+            const menuToggle = document.getElementById('menu-toggle');
+            const closeMenu = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeMenu.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                    
+                    // 找到对应的章节并展开
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetChapter = document.getElementById(targetId);
+                    if (targetChapter) {
+                        const header = targetChapter.querySelector('.chapter-header');
+                        const content = targetChapter.querySelector('.chapter-content');
+                        const icon = header.querySelector('i');
+                        
+                        if (content.style.display === 'none' || !content.style.display) {
+                            content.style.display = 'block';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            });
+
+            // 点击移动端菜单外部关闭菜单
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // 导航栏滚动效果
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-4');
+                    navbar.classList.add('shadow-lg');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2');
+                    navbar.classList.remove('shadow-lg');
+                }
+            });
+
+            // 返回顶部按钮
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 打印功能
+            const printBtn = document.getElementById('print-btn');
+            printBtn.addEventListener('click', function() {
+                window.print();
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
